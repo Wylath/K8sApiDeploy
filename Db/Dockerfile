@@ -2,7 +2,9 @@
 FROM postgres:latest
  
 #Variables d'environement
-ENV POSTGRES_PASSWORD=Test1234=
+ENV POSTGRES_USER=ps_user
+ENV POSTGRES_PASSWORD=test1234=
+ENV POSTGRES_DB=testdb
  
 #Définir mes volumes
 VOLUME /var/lib/postgres

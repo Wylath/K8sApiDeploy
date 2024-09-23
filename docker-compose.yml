@@ -7,7 +7,7 @@ services:
     container_name: k8sapiback
     build: ./Back/.
     env_file:
-      - ./Back/.env
+      - ./.env
     environment:
       - DB_HOST:$DB_HOST
     depends_on:

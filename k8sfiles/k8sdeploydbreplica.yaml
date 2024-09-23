@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: k8sapideploy-db-prod
-          image: wylath/k8sapideploydb:001
+          image: wylath/k8sapideploydb:002
           resources:
             limits:
               memory: "600Mi"
