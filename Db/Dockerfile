@@ -1,11 +1,11 @@
 #récupération de l'image Sql server
-FROM mysql:latest
+FROM postgres:latest
  
 #Variables d'environement
-ENV MYSQL_ROOT_PASSWORD=Test1234=
+ENV POSTGRES_PASSWORD=Test1234=
  
 #Définir mes volumes
-VOLUME /var/lib/mysql
+VOLUME /var/lib/postgres
  
 #Exposer le port
 EXPOSE 5432
