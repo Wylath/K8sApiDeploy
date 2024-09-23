@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: k8sapideploy-front
+  namespace: k8sapideploy
+  labels:
+    app: k8sapifront
+spec:
+  nodeName: kind-worker
+  containers:
+    - name: k8sapideploy-front-prod
+      image: wylath/k8sapideployfront:001
+      resources:
+        limits:
+          memory: "600Mi"
+          cpu: "0.5"
+        requests:
+          memory: "1Mi"
+          cpu: "0.5"
+      ports:
+      - containerPort: 4200

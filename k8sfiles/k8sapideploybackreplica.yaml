@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: k8sapideploy-back
+  namespace: k8sapideploy
+  labels:
+    app: k8sapiback
+spec:
+  nodeName: kind-worker
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: k8sapiback
+    spec:
+      containers:
+        - name: k8sapideploy-back-prod
+          image: wylath/k8sapideployback:001
+          resources:
+            limits:
+              memory: "200Mi"
+              cpu: "0.5"
+            requests:
+              memory: "1Mi"
+              cpu: "0.5"
+          ports:
+          - containerPort: 3000 

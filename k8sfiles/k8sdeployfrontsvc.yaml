@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8sapideployfront-svc
+  namespace: k8sapideploy
+spec:
+  selector:
+    app: k8sapifront
+  type: NodePort
+  ports:
+    - protocol: TCP
+      name: front
+      port: 4200
+      targetPort: 4200
+      nodePort: 30002
