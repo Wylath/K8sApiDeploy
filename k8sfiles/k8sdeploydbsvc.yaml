@@ -6,9 +6,9 @@ metadata:
 spec:
   selector:
     app: k8sapidb
-  type: clusterIP
+  type: NodePort
   ports:
-    - protocol: TCP/IP
+    - protocol: TCP
       name: db
       port: 5432
       targetPort: 5432

@@ -6,7 +6,6 @@ metadata:
   labels:
     app: k8sapiback
 spec:
-  nodeName: kind-worker
   replicas: 5
   template:
     metadata:
