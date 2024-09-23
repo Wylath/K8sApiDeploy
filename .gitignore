@@ -1,8 +1,4 @@
 k8s
 sourcegit
 tokenDashboard.txt
-*.yml
-*.yaml
 README.md
-Db/*.yml
-Db/*.yaml
