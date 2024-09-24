@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: k8sapideploy-db
+  name: k8sapidb
   namespace: k8sapideploy
   labels:
     app: k8sapidb

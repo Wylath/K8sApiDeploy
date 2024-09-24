@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: k8sapideploy-front
+  name: k8sapifront
   namespace: k8sapideploy
   labels:
     app: k8sapifront
@@ -9,7 +9,7 @@ spec:
   nodeName: kind-worker
   containers:
     - name: k8sapideploy-front-prod
-      image: wylath/k8sapideployfront:003
+      image: wylath/k8sapideployfront:004
       resources:
         limits:
           memory: "600Mi"
