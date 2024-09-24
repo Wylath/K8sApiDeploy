@@ -3,6 +3,8 @@ kind: ReplicationController
 metadata:
   name: k8sapideploy-back
   namespace: k8sapideploy
+  labels:
+    app: k8sapiback
 spec:
   replicas: 5
   selector:
