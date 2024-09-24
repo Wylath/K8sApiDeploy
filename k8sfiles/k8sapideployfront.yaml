@@ -9,7 +9,7 @@ spec:
   nodeName: kind-worker
   containers:
     - name: k8sapideploy-front-prod
-      image: wylath/k8sapideployfront:002
+      image: wylath/k8sapideployfront:003
       resources:
         limits:
           memory: "600Mi"
