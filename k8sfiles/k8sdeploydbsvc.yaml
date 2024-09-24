@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: k8sapidb
-  type: NodePort
+  type: ClusterIP
   ports:
     - protocol: TCP
       name: db

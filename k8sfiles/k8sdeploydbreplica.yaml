@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: k8sapidb
@@ -8,14 +8,15 @@ metadata:
 spec:
   replicas: 5
   selector:
-    app: k8sapidb
+    matchLabels:
+      app: k8sapidb
   template:
     metadata:
       labels:
         app: k8sapidb
     spec:
       containers:
-        - name: k8sapideploy-db-prod
+        - name: postgres
           image: wylath/k8sapideploydb:002
           resources:
             limits:
@@ -26,3 +27,6 @@ spec:
               cpu: "0.5"
           ports:
             - containerPort: 5432
+          envFrom:
+            - configMapRef:
+                name: postgres-secret
